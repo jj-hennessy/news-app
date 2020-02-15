@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding Number of Links on Page</title>
+
+	<meta charset="utf-8">
+  <meta name="description" content="Finding Number of Links on Page">
+  <meta name="author" content="JJ Hennessy">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+	<link rel="icon" href="https://scx2.b-cdn.net/gfx/news/hires/2019/4-space.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Assistant|Karla" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
+
+	<script type="text/javascript" src="eel.js"></script>
+
+	<script type="text/javascript" src="spider.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="form-group">
+			<h3>Please click on the sites from which you would like to receive articles:</h3>
+			<div class="form-check">
+				<input class="form-check-input news-source" type="checkbox" value="off" data-url="https://www.nytimes.com/section/science" id="news-source" onclick="setValueOfCheckbox()" style="width: 25px; height: 25px;">
+				<label class="form-check-label" for="news-source" style="font-size: 25px; padding-left: 15px;">
+			    New York Times | Science
+			  </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input news-source" type="checkbox" value="off" data-url="https://www.theverge.com/science" id="news-source" onclick="setValueOfCheckbox()" style="width: 25px; height: 25px;">
+				<label class="form-check-label" for="news-source" style="font-size: 25px; padding-left: 15px;">
+			    The Verge | Science
+			  </label>
+			</div>
+		</div>
+		<button class="btn btn-primary" onclick="getArticlesFromPage()">Show Me The Money!</button>
+	</div>
+
+	<div class="container" id="article-container"></div>
+
+</body>
+</html>
